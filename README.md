@@ -17,7 +17,7 @@ The lib exposes the following methods:
 
 Wait for an element to appear. You can use any valid Enzyme selector (a component, CSS selector, etc). 
 
-```
+```javascript
 import { waitForElement } from 'enzyme-async-helpers';
 ...
 
@@ -34,7 +34,7 @@ it('should wait for MyComponent to appear', async () => {
 
 Wait for your component's state to update to something.
 
-```
+```javascript
 import { waitForState } from 'enzyme-async-helpers';
 ...
 
@@ -51,7 +51,7 @@ it('should wait for loading to stop', async () => {
 
 Wait for your component's props to update to something.
 
-```
+```javascript
 import { waitForProps } from 'enzyme-async-helpers';
 ...
 
@@ -66,7 +66,7 @@ it('should wait for someProp to be valid', async () => {
 
 ### config
 All the methods listed above take a third `config` argument of the following shape:
-```
+```javascript
 type Config = {
     interval: number, // Default: 50, how often to check for validity
     timeout: number // Default: 2000 (2 seconds), how long to wait before timing out
