@@ -26,7 +26,7 @@
   ],
   "scripts": {
     "prepublish": "yarn build",
-    "build": "rm -rf lib && babel src/ -d lib/ --ignore __tests__",
+    "build": "rm -rf lib && babel src/ -d lib/ --ignore __tests__ && flow-copy-source --ignore '**/__tests__/**' src lib",
     "test": "jest src --coverage",
     "test:watch": "yarn jest src --watch",
     "flow": "flow"
@@ -36,7 +36,9 @@
       "./config/jest-shims.js",
       "./config/jest-setup.js"
     ],
-    "collectCoverageFrom": ["src/**/*"]
+    "collectCoverageFrom": [
+      "src/**/*"
+    ]
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -46,7 +48,8 @@
     "babel-preset-react": "^6.24.1",
     "enzyme": "^3.2.0",
     "enzyme-adapter-react-16": "^1.1.0",
-    "flow-bin": "0.59",
+    "flow-bin": "^0.66.0",
+    "flow-copy-source": "^1.3.0",
     "flow-typed": "^2.2.3",
     "jest": "^21.2.1",
     "react": "^16.2.0",
@@ -55,5 +58,9 @@
   "peerDependencies": {
     "enzyme": "^3.0.0",
     "enzyme-adapter-react-16": "^1.0.0"
+  },
+  "dependencies": {
+    "enzyme-to-json": "^3.3.1",
+    "pretty-format": "^22.4.0"
   }
 }
