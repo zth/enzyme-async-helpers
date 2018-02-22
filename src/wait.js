@@ -1,5 +1,5 @@
 // @flow
-import * as React from 'react';
+import React from 'react';
 
 export type ValidatorFn = (wrapper: any) => boolean;
 export type Config = {
