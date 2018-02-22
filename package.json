@@ -1,6 +1,6 @@
 {
   "name": "enzyme-async-helpers",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "author": "Gabriel Nordeborn",
   "license": "MIT",
   "main": "lib/index.js",
